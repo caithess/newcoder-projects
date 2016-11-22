@@ -1,5 +1,0 @@
-__pycache__/
-
-# dict order changed when running script again
-*.json
-*.geojson
