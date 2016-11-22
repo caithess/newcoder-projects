@@ -2,8 +2,7 @@
 Kate Hess
 August 16, 2016
 from newcoder.io - Data Viz Project
-'''
-"""
+
 Data Visualization Project
 Parse data from an ugly CSV or Excel file, and render it in
 JSON-like form, visualize in graphs, and plot as a map.
@@ -12,11 +11,10 @@ Part III: Take the data we parsed earlier and create a different format
 for rendering a map. Here, we parse through each line item of the
 CSV file and create a geojson object, to be collected into one geojson
 file for uploading to gist.github.com.
-"""
+'''
 
 import geojson
-
-from parse import parse, MY_FILE
+from parse import MY_FILE, parse
 
 
 def create_map(data_file):
@@ -58,6 +56,7 @@ def create_map(data_file):
         f.write(geojson.dumps(geo_map))
 
     return geo_map
+
 
 def main():
     data = parse(MY_FILE, ',')

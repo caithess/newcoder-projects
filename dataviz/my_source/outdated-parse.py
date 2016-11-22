@@ -3,9 +3,7 @@ Kate Hess
 from newcoder.io Data Viz project
 (doing this again to refresh)
 August 15, 2016
-'''
 
-"""
 Data Visualization Project
 Parse data from an ugly CSV or Excel file, and render it in
 JSON, save to a database, and visualize in graph form.
@@ -15,7 +13,7 @@ that is easier for Python to play with.
 
 Copyright (c) 2013 E. Lynn Root
 Distributed under the zlib png license. See LICENSE for details.
-"""
+'''
 
 
 import csv

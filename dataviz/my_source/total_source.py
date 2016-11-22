@@ -2,25 +2,22 @@
 Kate Hess
 from newcoder.io Data Viz project
 (doing this again to refresh)
-August 15, 2016
-'''
-"""
+
 Data Visualization Project
 Parse data from an ugly CSV or Excel file, and render it in
 JSON, save to a database, and visualize in graph form.
+August 15, 2016
+'''
 
-Copyright (c) 2013 E. Lynn Root
-Distributed under the zlib png license. See LICENSE for details.
-"""
 import csv
 import json
 import os
-
 from collections import Counter
 
-import geojson
 import matplotlib.pyplot as plt
 import numpy as np
+
+import geojson
 
 MY_FILE = '../data/sample_sfpd_incident_all.csv'
 
@@ -69,14 +66,14 @@ def visualize_days(parsed_data):
     # separate the x-axis data (the days of the week) from the 'counter'
     # variable from the y-axis data (the number of incidents each day)
     data_list = [
-                counter['Monday'],
-                counter['Tuesday'],
-                counter['Wednesday'],
-                counter['Thursday'],
-                counter['Friday'],
-                counter['Saturday'],
-                counter['Sunday']
-                ]
+        counter['Monday'],
+        counter['Tuesday'],
+        counter['Wednesday'],
+        counter['Thursday'],
+        counter['Friday'],
+        counter['Saturday'],
+        counter['Sunday']
+    ]
     # create x-axis string labels
     day_tuple = tuple(["Mon", "Tues", "Wed", "Thurs", "Fri", "Sat", "Sun"])
     # with that y-axis data, assign it to a matplotlib instance

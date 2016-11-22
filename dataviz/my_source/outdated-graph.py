@@ -2,24 +2,24 @@
 Kate Hess
 August 16, 2016
 from newcoder.io - Data Viz Project
-'''
-"""
+
 Data Visualization Project
 Parse data from an ugly CSV or Excel file, and render it in
 JSON-like form, visualize in graphs, and plot on Google Maps.
 
 Part II: Take the data we just parsed and visualize it using popular
 Python math libraries.
-"""
-
-from collections import Counter
+'''
 
 import csv
 import os
+from collections import Counter
+
 import matplotlib.pyplot as plt
 import numpy as np
 
-from parse import parse, MY_FILE
+from parse import MY_FILE, parse
+
 
 def visualize_days():
     '''Takes JSON-like object of parsed data.
@@ -34,14 +34,14 @@ def visualize_days():
     # separate the x-axis data (the days of the week) from the 'counter'
     # variable from the y-axis data (the number of incidents each day)
     data_list = [
-                counter['Monday'],
-                counter['Tuesday'],
-                counter['Wednesday'],
-                counter['Thursday'],
-                counter['Friday'],
-                counter['Saturday'],
-                counter['Sunday']
-                ]
+        counter['Monday'],
+        counter['Tuesday'],
+        counter['Wednesday'],
+        counter['Thursday'],
+        counter['Friday'],
+        counter['Saturday'],
+        counter['Sunday']
+    ]
     # create x-axis string labels
     day_tuple = tuple(["Mon", "Tues", "Wed", "Thurs", "Fri", "Sat", "Sun"])
     # with that y-axis data, assign it to a matplotlib instance
